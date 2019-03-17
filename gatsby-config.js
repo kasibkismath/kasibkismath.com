@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Overreacted',
+    title: 'Kasib Kismath',
     author: 'Dan Abramov',
     description: 'Personal blog by Dan Abramov. I explain with words and code.',
     siteUrl: 'https://overreacted.io',
@@ -140,7 +140,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#ffa7c4`,
         display: `minimal-ui`,
-        icon: `src/assets/icon.png`,
+        icon: `src/assets/kk_favicon.png`,
         theme_color_in_head: false,
       },
     },

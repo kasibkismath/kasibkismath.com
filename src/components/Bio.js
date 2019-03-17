@@ -1,9 +1,13 @@
 import React from 'react';
-import profilePic from '../assets/profile-pic.jpg';
+import profilePic from '../assets/profile-pic.jpeg';
+import twitterIcon from '../assets/twitter.png';
 import { rhythm } from '../utils/typography';
 
 class Bio extends React.Component {
   render() {
+    const imageClick = () => {
+      window.open('https://mobile.twitter.com/kasibkismath', '_blank');
+    };
     return (
       <div
         style={{
@@ -23,9 +27,20 @@ class Bio extends React.Component {
           }}
         />
         <p style={{ maxWidth: 310 }}>
-          Personal blog by{' '}
-          <a href="https://mobile.twitter.com/dan_abramov">Dan Abramov</a>.{' '}
-          I&nbsp;explain with words and code.
+          Full Stack Developer{' '}
+          {/* <a href="https://mobile.twitter.com/kasibkismath"> */}
+          <img
+            src={twitterIcon}
+            alt={`Kasib Kismath Twitter`}
+            style={{
+              marginBottom: rhythm(-0.5),
+              width: rhythm(1.5),
+              height: rhythm(1.5),
+              cursor: 'pointer',
+            }}
+            onClick={() => imageClick()}
+          />
+          {/* </a> */}
         </p>
       </div>
     );

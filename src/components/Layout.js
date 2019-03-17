@@ -16,7 +16,17 @@ class Layout extends React.Component {
     window.__onThemeChange = () => {
       this.setState({ theme: window.__theme });
     };
+
+    var time = new Date().getHours();
+    if (time >= 8 && time < 21) {
+      this.setState({ theme: 'light' });
+      window.__setPreferredTheme('light');
+    } else {
+      this.setState({ theme: 'dark' });
+      window.__setPreferredTheme('dark');
+    }
   }
+
   renderHeader() {
     const { location, title } = this.props;
     const rootPath = `${__PATH_PREFIX__}/`;
